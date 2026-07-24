@@ -26,10 +26,11 @@ export function contactEmailHtml({
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br />");
-  const receivedAt = new Date().toLocaleString("en-US", {
+  const receivedAt = `${new Date().toLocaleString("en-US", {
     dateStyle: "medium",
     timeStyle: "short",
-  });
+    timeZone: "Asia/Karachi",
+  })} PKT`;
 
   return `<!doctype html>
 <html>
