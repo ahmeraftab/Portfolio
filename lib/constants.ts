@@ -14,7 +14,7 @@ export const SITE = {
   email: "ahmeraftab02@gmail.com",
   whatsapp: "https://wa.me/923150022499",
   resumeUrl: "/resume.pdf",
-  url: "https://portfolio-theta-puce-36.vercel.app",
+  url: "https://ahmeraftab.vercel.app",
 } as const;
 
 export const SOCIAL_LINKS = [

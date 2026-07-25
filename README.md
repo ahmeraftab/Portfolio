@@ -1,6 +1,6 @@
 # Ahmer Aftab, Portfolio
 
-**Live:** [portfolio-theta-puce-36.vercel.app](https://portfolio-theta-puce-36.vercel.app/)
+**Live:** [ahmeraftab.vercel.app](https://ahmeraftab.vercel.app/)
 
 My personal portfolio: an AI-focused full stack developer based in Karachi, Pakistan, showcasing production RAG pipelines, LLM-integrated products, and full-stack web/mobile work.
 
