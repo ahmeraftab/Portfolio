@@ -153,7 +153,7 @@ export type ExperienceEntry = {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    role: "Full Stack Developer",
+    role: "Software Engineer",
     company: "Evolisyss",
     start: "Sep 2025",
     end: "Mar 2026",
