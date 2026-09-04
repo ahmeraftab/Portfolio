@@ -2,9 +2,9 @@
 // the hero, the footer, and structured data.
 export const SITE = {
   name: "Ahmer Aftab",
-  role: "AI-Focused Full Stack Developer",
+  role: "AI-Focused Software Engineer",
   taglines: [
-    "AI-Focused Full Stack Developer",
+    "AI-Focused Software Engineer",
     "Building AI Products That Ship",
     "RAG Pipelines. LLM Integrations. Real Products.",
   ],

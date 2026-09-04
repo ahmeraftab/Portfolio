@@ -32,8 +32,9 @@ export const metadata: Metadata = {
   description: SITE.pitch,
   keywords: [
     "Ahmer Aftab",
-    "Full Stack Developer",
+    "Software Engineer",
     "AI Developer",
+    "Full Stack Engineer",
     "RAG Pipelines",
     "LLM Integration",
     "Next.js Developer",

@@ -21,7 +21,7 @@ export function About() {
           <div className="flex flex-col gap-6">
             <Reveal delay={0.1}>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I&apos;m a full stack developer who spends most of my time in the AI layer of
+                I&apos;m an AI-focused software engineer who spends most of my time in the AI layer of
                 modern products: RAG pipelines, LLM orchestration, and the plumbing that turns a
                 language model into something reliable enough to ship. My final year project was
                 a production-deployed multimodal RAG assistant handling document, voice, and image

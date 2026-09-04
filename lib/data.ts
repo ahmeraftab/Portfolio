@@ -153,6 +153,17 @@ export type ExperienceEntry = {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
+    role: "Freelance Software Engineer",
+    company: "NexTek, Remote",
+    start: "May 2026",
+    end: "Present",
+    bullets: [
+      "Architecting and developing a multi-tenant CRM system, owning backend architecture, database design, and end-to-end feature development.",
+      "Building core CRM workflows including omnichannel communication and document management, using a modern full-stack architecture.",
+      "Collaborating directly with the client to translate business requirements into scalable, production-ready features.",
+    ],
+  },
+  {
     role: "Software Engineer",
     company: "Evolisyss",
     start: "Sep 2025",
