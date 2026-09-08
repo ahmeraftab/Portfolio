@@ -23,11 +23,11 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "Backend",
-    items: ["FastAPI", "Node.js", "REST APIs", "Python", "C++"],
+    items: ["FastAPI", "Node.js", "NestJS", "Prisma", "REST APIs", "Python", "C++"],
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "MongoDB", "MySQL", "SQL Server"],
+    items: ["PostgreSQL", "Supabase", "MongoDB", "MySQL", "SQL Server"],
   },
   {
     category: "Cloud & Data",
@@ -158,7 +158,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
     start: "May 2026",
     end: "Present",
     bullets: [
-      "Architecting and developing a multi-tenant CRM system, owning backend architecture, database design, and end-to-end feature development.",
+      "Architecting and developing a multi-tenant CRM system, owning backend architecture, database design, and end-to-end feature development, using NestJS, TypeScript, Prisma, PostgreSQL (Supabase), Next.js, and React.",
       "Building core CRM workflows including omnichannel communication and document management, using a modern full-stack architecture.",
       "Collaborating directly with the client to translate business requirements into scalable, production-ready features.",
     ],
