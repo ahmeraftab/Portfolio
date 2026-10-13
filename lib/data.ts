@@ -9,6 +9,7 @@ export const SKILLS: SkillCategory[] = [
     items: [
       "RAG Pipelines",
       "Google Gemini",
+      "OpenAI API",
       "Vector Embeddings",
       "ChromaDB",
       "MiniLM",
@@ -31,7 +32,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "Cloud & Data",
-    items: ["AWS (Lambda, S3, EC2)", "Azure", "Docker", "Vercel", "Railway", "Render"],
+    items: ["AWS (Lambda, S3, EC2)", "Oracle Cloud (OCI)", "Azure", "Docker", "Vercel", "Railway", "Render"],
   },
 ];
 
@@ -153,14 +154,14 @@ export type ExperienceEntry = {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    role: "Freelance Software Engineer",
+    role: "Full Stack AI Developer (Project-based)",
     company: "NexTek, Remote",
     start: "May 2026",
     end: "Present",
     bullets: [
-      "Architecting and developing a multi-tenant CRM system, owning backend architecture, database design, and end-to-end feature development, using NestJS, TypeScript, Prisma, PostgreSQL (Supabase), Next.js, and React.",
-      "Building core CRM workflows including omnichannel communication and document management, using a modern full-stack architecture.",
-      "Collaborating directly with the client to translate business requirements into scalable, production-ready features.",
+      "Built a procurement assistant (OpenAI GPT-4o) that lets users query live business data in natural language, including RAG-based document question answering.",
+      "Built a multi-tenant CRM platform using NestJS, Prisma, and Next.js, deployed on Oracle Cloud with a Supabase-hosted PostgreSQL database, contributing across the full stack from backend architecture through to feature delivery.",
+      "Collaborated directly with the client to translate business requirements into production-ready features.",
     ],
   },
   {
