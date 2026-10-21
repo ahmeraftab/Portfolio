@@ -21,9 +21,7 @@ export function Navbar() {
 
   React.useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [open]);
 
   return (
@@ -32,26 +30,28 @@ export function Navbar() {
         <motion.nav
           initial={{ y: -24, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className={cn(
-            "flex w-full max-w-5xl items-center justify-between rounded-full border border-transparent px-4 py-2.5 transition-all duration-300",
-            scrolled && "glass border-border/70 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.5)]"
+            "flex w-full max-w-5xl items-center justify-between rounded-full border border-transparent px-5 py-2.5 transition-all duration-300",
+            scrolled && "glass border-border/60 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.6)]"
           )}
         >
+          {/* Logo */}
           <Link
             href="#top"
-            className="font-mono text-sm font-medium tracking-tight text-foreground"
+            className="font-display text-sm font-bold tracking-tight text-foreground"
             data-cursor-hover
           >
             AA<span className="text-primary">.</span>
           </Link>
 
-          <div className="hidden items-center gap-1 md:flex">
+          {/* Desktop nav */}
+          <div className="hidden items-center gap-0.5 md:flex">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-3.5 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="rounded-full px-3.5 py-1.5 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
                 data-cursor-hover
               >
                 {link.label}
@@ -59,11 +59,12 @@ export function Navbar() {
             ))}
           </div>
 
+          {/* CTA */}
           <div className="hidden items-center gap-2 md:flex">
             <Button
               size="lg"
               nativeButton={false}
-              className="h-9 rounded-full px-4"
+              className="h-9 rounded-full px-4 font-mono text-xs uppercase tracking-wider"
               render={<a href="#contact" data-cursor-hover />}
             >
               Let&apos;s Talk
@@ -71,12 +72,13 @@ export function Navbar() {
             </Button>
           </div>
 
+          {/* Mobile hamburger */}
           <div className="flex items-center gap-2 md:hidden">
             <button
               type="button"
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
-              className="flex size-9 items-center justify-center rounded-full border border-border/80 text-foreground"
+              className="flex size-9 items-center justify-center rounded-full border border-border/70 text-foreground transition-colors hover:border-primary/50"
             >
               {open ? <X className="size-4" /> : <Menu className="size-4" />}
             </button>
@@ -84,25 +86,26 @@ export function Navbar() {
         </motion.nav>
       </header>
 
+      {/* Mobile full-screen menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 flex flex-col bg-background/98 backdrop-blur-xl md:hidden"
+            initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
+            exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 z-40 flex flex-col bg-background/98 backdrop-blur-2xl md:hidden"
           >
-            <div className="flex flex-1 flex-col items-center justify-center gap-2">
+            <div className="flex flex-1 flex-col items-center justify-center gap-1">
               {NAV_LINKS.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 * i, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  className="px-6 py-3 text-3xl font-medium text-foreground"
+                  transition={{ delay: 0.06 * i + 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="px-6 py-3 font-display text-4xl font-bold tracking-tight text-foreground transition-colors hover:text-primary"
                 >
                   {link.label}
                 </motion.a>
@@ -110,10 +113,10 @@ export function Navbar() {
               <motion.a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.08 * NAV_LINKS.length, duration: 0.4 }}
-                className="mt-4 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
+                transition={{ delay: 0.06 * NAV_LINKS.length + 0.1, duration: 0.5 }}
+                className="mt-6 rounded-full bg-primary px-8 py-3 font-mono text-sm uppercase tracking-widest text-primary-foreground"
               >
                 Let&apos;s Talk
               </motion.a>
