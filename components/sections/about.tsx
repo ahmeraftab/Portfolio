@@ -10,13 +10,7 @@ import { cn } from "@/lib/utils";
 
 export function About() {
   return (
-    <section id="about" className="relative py-28 sm:py-36 overflow-hidden">
-      {/* Cinematic ambient glow */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-32 top-1/3 -z-10 h-[500px] w-[500px] rounded-full blur-[120px]"
-        style={{ background: "color-mix(in oklch, var(--brand-blue), transparent 88%)" }}
-      />
+    <section id="about" className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="ABOUT"
