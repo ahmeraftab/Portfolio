@@ -15,10 +15,10 @@ export function SectionHeading({
   className?: string;
 }) {
   return (
-    <div className={cn("flex flex-col gap-5", align === "center" && "items-center text-center", className)}>
+    <div className={cn("flex flex-col gap-4", align === "center" && "items-center text-center", className)}>
       <Reveal>
         <div className={cn("flex items-center gap-3", align === "center" && "justify-center")}>
-          <span className="h-px w-6 bg-primary shrink-0" />
+          <span className="h-px w-5 bg-primary shrink-0" />
           <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-primary">
             {eyebrow}
           </span>
@@ -28,9 +28,10 @@ export function SectionHeading({
       <Reveal delay={0.06}>
         <h2
           className={cn(
-            "font-display editorial text-[clamp(2.6rem,6vw,5.5rem)] text-balance",
+            "font-display font-bold tracking-tight text-balance text-3xl sm:text-4xl md:text-5xl",
             align === "center" && "mx-auto"
           )}
+          style={{ lineHeight: 1.12, letterSpacing: "-0.025em" }}
         >
           {title}
         </h2>

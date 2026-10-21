@@ -22,7 +22,7 @@ export function Skills() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="TECH STACK"
-          title={<>Tools I<br />build with</>}
+          title="Tools I build with"
           description="A stack chosen for shipping fast without cutting corners — from LLM orchestration down to the database."
         />
 

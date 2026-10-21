@@ -21,7 +21,7 @@ export function About() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="ABOUT"
-          title={<>I build the AI layer,<br className="hidden sm:block" /> then make it<br className="hidden sm:block" /> a product.</>}
+          title="I build the AI layer, then make it a product."
         />
 
         <div className="mt-16 grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">

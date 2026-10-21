@@ -25,7 +25,7 @@ export function Experience() {
       />
 
       <div className="mx-auto max-w-4xl px-6">
-        <SectionHeading eyebrow="EXPERIENCE" title={<>Where I&apos;ve<br />worked</>} />
+        <SectionHeading eyebrow="EXPERIENCE" title="Where I've worked" />
 
         <div ref={containerRef} className="relative mt-16 pl-8 sm:pl-10">
           {/* Timeline track */}

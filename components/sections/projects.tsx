@@ -100,11 +100,10 @@ export function Projects() {
               whileInView={{ y: "0%", opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-              className="editorial font-display text-[clamp(2.8rem,7vw,6.5rem)]"
+              className="font-display font-bold text-3xl sm:text-4xl md:text-5xl"
+              style={{ letterSpacing: "-0.025em", lineHeight: 1.12 }}
             >
-              Selected
-              <br />
-              Projects
+              Selected Projects
             </motion.h2>
 
             {/* Live counter — large screen */}
