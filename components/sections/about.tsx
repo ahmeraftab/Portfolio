@@ -90,7 +90,7 @@ export function About() {
           </div>
 
           {/* Clean portrait — back in its original spot */}
-          <Reveal delay={0.2} className="mx-auto w-full max-w-sm">
+          <Reveal delay={0.2} className="mx-auto w-full max-w-sm lg:-mt-8">
             <TiltCard className="rounded-3xl border border-border/70 bg-muted/20 p-3">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[linear-gradient(160deg,color-mix(in_oklch,var(--brand-teal),transparent_85%),color-mix(in_oklch,var(--brand-blue),transparent_90%))]">
                 <Image
