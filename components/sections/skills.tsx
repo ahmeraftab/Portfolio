@@ -11,7 +11,12 @@ export function Skills() {
   const allSkills = SKILLS.flatMap((c) => c.items);
 
   return (
-    <section id="skills" className="relative py-28 sm:py-36">
+    <section id="skills" className="relative overflow-hidden py-28 sm:py-36">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-1/3 -z-10 h-[460px] w-72 -translate-y-1/2 blur-[120px]"
+        style={{ background: "color-mix(in oklch, var(--brand-teal), transparent 92%)" }}
+      />
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="TECH STACK"

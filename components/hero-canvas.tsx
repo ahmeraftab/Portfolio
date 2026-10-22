@@ -51,7 +51,7 @@ export function HeroCanvas() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-50 sm:opacity-100"
         >
           <HeroScene />
         </motion.div>

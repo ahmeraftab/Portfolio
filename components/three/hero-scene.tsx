@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Float, MeshDistortMaterial, Sparkles } from "@react-three/drei";
 import * as THREE from "three";
 
-const ACCENT = "#1fe6c4";
+const ACCENT = "#16ecca";
 
 function DistortedCore({ accent }: { accent: string }) {
   const group = React.useRef<THREE.Group>(null);
@@ -28,24 +28,27 @@ function DistortedCore({ accent }: { accent: string }) {
 
   return (
     <group ref={group}>
+      {/* Morphing wireframe core — ambient, never a solid blob */}
       <Float speed={1.6} rotationIntensity={0.4} floatIntensity={0.6}>
         <mesh ref={mesh}>
-          <icosahedronGeometry args={[1.5, 6]} />
+          <icosahedronGeometry args={[1.7, 4]} />
           <MeshDistortMaterial
             color={accent}
             attach="material"
-            distort={0.42}
-            speed={1.8}
-            roughness={0.15}
-            metalness={0.6}
+            wireframe
+            distort={0.4}
+            speed={1.6}
+            transparent
+            opacity={0.5}
             emissive={accent}
-            emissiveIntensity={0.18}
+            emissiveIntensity={0.25}
           />
         </mesh>
       </Float>
+      {/* Faint outer shell */}
       <mesh rotation={[0.4, 0.2, 0]}>
-        <icosahedronGeometry args={[2.05, 1]} />
-        <meshBasicMaterial color={accent} wireframe transparent opacity={0.08} />
+        <icosahedronGeometry args={[2.35, 1]} />
+        <meshBasicMaterial color={accent} wireframe transparent opacity={0.06} />
       </mesh>
     </group>
   );

@@ -16,7 +16,12 @@ export function Experience() {
   const lineScale = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section id="experience" className="relative py-28 sm:py-36">
+    <section id="experience" className="relative overflow-hidden py-28 sm:py-36">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 bottom-1/4 -z-10 h-72 w-72 rounded-full blur-[120px]"
+        style={{ background: "color-mix(in oklch, var(--brand-teal), transparent 92%)" }}
+      />
       <div className="mx-auto max-w-4xl px-6">
         <SectionHeading eyebrow="EXPERIENCE" title="Where I've worked" />
 
@@ -35,7 +40,7 @@ export function Experience() {
                 </span>
 
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="font-display text-lg font-semibold text-foreground">
                     {entry.role} <span className="text-muted-foreground">· {entry.company}</span>
                   </h3>
                   <span className="font-mono text-xs text-muted-foreground">
