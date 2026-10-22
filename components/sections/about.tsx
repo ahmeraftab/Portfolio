@@ -46,7 +46,7 @@ export function About() {
           title="I build the AI layer, then wrap it in a product people enjoy using."
         />
 
-        <div className="mt-16 grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="mt-16 grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="flex flex-col gap-6">
             <Reveal delay={0.1}>
               <p className="text-lg leading-relaxed text-muted-foreground">
